@@ -117,6 +117,11 @@ i:hover {
   cursor: pointer;
 }
 
+button {
+  cursor: pointer;
+  border: none;
+}
+
 /* NAVIGATION */
 
 nav {
@@ -632,13 +637,206 @@ header .row {
   margin-left: 12px;
   font-size: 20px;
   font-weight: bold;
-  color: #243e63;
+  color: var(--dark-blue);
 }
 .value__para {
   margin-top: 16px;
   line-height: 1.625;
-  color: #718096;
+  color: var(--grey-text);
 }
+
+/* PRICING */
+
+#pricing .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#pricing .section__para {
+  max-width: 576px;
+  text-align: center;
+}
+.plan {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  width: 100%;
+  max-width: 24rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: rgb(255 255 255);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 2rem;
+  padding-top: 0.5rem;
+  text-align: center;
+  color: rgb(26 32 44);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.plan__cards {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.plan__sec1 {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  line-height: 1.625;
+}
+
+.plan__sec2 {
+  margin-left: -2rem;
+  margin-right: -2rem;
+  display: flex;
+  flex: 1 1 0%;
+  flex-direction: column;
+  border-top-width: 2px;
+  border-bottom-width: 2px;
+  padding: 2rem;
+}
+
+.plan__sec3 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.plan__name,
+.plan__price,
+.plan__duration {
+  font-weight: bold;
+  line-height: 1.625;
+}
+.plan__name {
+  font-size: 20px;
+}
+.plan__price {
+  font-size: 48px;
+  margin: 4px 0;
+}
+.plan__duration {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+.plan__feature {
+  margin-top: 20px;
+  font-weight: 500;
+  color: var(--grey-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.plan__target {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+.plan__button {
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  transition: all 300ms ease;
+  width: 100%;
+  border-radius: 9999px;
+  border-color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.plan__button:hover {
+  transform: translate(1px, -1px);
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.plan:nth-child(1) .plan__stripe,
+.plan:nth-child(1) .plan__button {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(56, 178, 172) 0%,
+    rgb(129, 230, 217) 100%
+  );
+}
+.plan:nth-child(2) {
+  background: linear-gradient(
+    135deg,
+    rgb(76, 81, 191) 0%,
+    rgb(102, 126, 234) 100%
+  );
+}
+.plan:nth-child(2) .plan__button {
+  color:  rgb(76, 81, 191);  background-color: #f7fafc;
+}
+
+.plan:nth-child(3) .plan__stripe,
+.plan:nth-child(3) .plan__button {
+  color: #f7fafc;
+  background: linear-gradient(
+    115deg,
+    rgb(245, 101, 101) 0%,
+    rgb(254, 178, 178) 100%
+  );
+}
+.plan:nth-child(odd) .plan__name,
+.plan:nth-child(odd) .plan__price,
+.plan:nth-child(odd) .plan__target {
+  color: var(--dark-blue);
+}
+.plan:nth-child(odd) .plan__duration {
+  color: var(--grey-text);
+}
+.plan:nth-child(2) .plan__name,
+.plan:nth-child(2) .plan__price,
+.plan:nth-child(2) .plan__target,
+.plan:nth-child(2) .plan__duration,
+.plan:nth-child(2) .plan__feature {
+  color: #f7fafc;
+}
+.plan:nth-child(1) .plan__sec2,
+.plan:nth-child(3) .plan__sec2 {
+  border-top: 2px solid rgb(229, 231, 235);
+  border-bottom: 2px solid rgb(229, 231, 235);
+}
+.plan:nth-child(2) .plan__sec2 {
+  border-top: 2px solid rgb(102, 126, 234);
+  border-bottom: 2px solid rgb(102, 126, 234);
+}
+.plans__blob {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  transform: translateX(-50%) translateY(50%);
+
+  width: 256px;
+  height: 256px;
+
+  background-color: #ffb4bc;
+  border-radius: 42% 58% 65% 35% / 45% 35% 65% 55%;
+
+  opacity: 0.25;
+}
+.plans {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
 
 /*
 
@@ -775,6 +973,15 @@ header .row {
   .values__list {
     max-width: 20rem;
     flex-direction: column;
+  }
+
+  .plans {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plan {
+    margin-right: 0px;
   }
 
 } 
@@ -920,6 +1127,13 @@ header .row {
   .feature__para {
     margin-top: 4px;
     line-height: 2;
+  }
+
+  .plan__price {
+    font-size: 36px;
+  }
+  .plan__bottom {
+    padding: 2rem 1rem;
   }
 
 
